@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head></head>
+    <body>
+        <textarea id="miTexto">Texto de ejemplo para seleccionar. (Pasa el cursor con el click por encima)</textarea>
+        <p id="seleccion"></p>
+        <script>
+            let texto = document.getElementById("miTexto")
+            let seleccion = document.getElementById("seleccion")
+            texto.addEventListener("select", function(){
+                let start = texto.selectionStart
+                let end = texto.selectionEnd
+                let seleccionado = texto.value.substring(start, end)
+                seleccion.textContent = seleccionado
+            })
+        </script>
+    </body>
+</html>

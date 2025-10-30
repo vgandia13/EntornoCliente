@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <style>
+            #anuncio img{
+                width: 300px;
+                height: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="anuncio">
+            <img src="">
+            <p></p>
+        </div>
+        <script>
+            let anuncio = document.getElementById("anuncio")
+            let anuncios = [
+                {img: "ocean car.jpg", texto: "Nuevas IA generativas"},
+                {img: "spell-placeholder.jpg", texto: "Lectura de tarot"}, 
+                {img: "cup image.png", texto: "Nuevo sabor"}
+            ]
+            let i = 0
+            anuncio.innerHTML = `<img src="${anuncios[i].img}"><p>${anuncios[i].texto}</p>`
+            setInterval(function(){
+                anuncio.innerHTML = `<img src="${anuncios[i].img}"><p>${anuncios[i].texto}</p>`
+                if(i != 2){
+                    i++
+                }else{
+                    i = 0
+                }
+            }, 5000)
+        </script>
+    </body>
+</html>

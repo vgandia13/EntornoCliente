@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head></head>
+    <body>
+        <input type="text" id="original" placeholder="Escribe aqui">
+        <input type="text" id="encriptado" placeholder="Encriptado" readonly>
+        <script>
+            let original = document.getElementById("original")
+            original.addEventListener("input", function(){
+                let mensaje = original.value 
+                let encriptado = ""
+                for(let i = 0; i < mensaje.length; i++){
+                    let charEncriptado = mensaje.charCodeAt(i) + 5
+                    encriptado += String.fromCharCode(charEncriptado)
+                }
+                document.getElementById("encriptado").value = encriptado
+            })
+        </script>
+    </body>
+</html>

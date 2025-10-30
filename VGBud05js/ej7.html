@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head></head>
+    <body>
+        <div class="noticia">
+            <h2>Trump reduce al 10 % los aranceles para China por el fentanilo tras reunirse con Xi</h2>
+            <p>Busan (Corea del Sur) (EFE).- El presidente de Estados Unidos, Donald Trump, anunció este jueves, tras mantener una reunión «increíble» con su homólogo chino, Xi Jinping, en Corea del Sur, que reducirá del 20 al 10 % los aranceles sobre el gigante asiático que impuso en represalia por el tráfico de fentanilo.</p>
+        </div>
+        <div class="noticia">
+            <h2>La hija de Sánchez estudia en una universidad privada de Pozuelo a la que el presidente llamó «chiringuito»</h2>
+            <p>En el campus de Pozuelo de Alarcón de ESIC University es un secreto a voces que la hija menor de Pedro Sánchez, Carlota Sánchez Gómez, es una compañera más desde septiembre. La información ha sido adelantada por 'Libertad Digital' y confirmada posteriormente por ABC a través de fuentes internas del mencionado centro universitario.</p>
+        </div>
+        <div class="noticia">
+            <h2>El ‘Cloaking’ que Burla a la IA y Convierte Noticias Falsas en ‘Verdad’ Absoluta</h2>
+            <p>Investigadores en ciberseguridad han alertado sobre un grave fallo de seguridad que afecta a navegadores y agentes de inteligencia artificial (IA) de nueva generación, como ChatGPT Atlas y Perplexity. El problema, denominado ‘encubrimiento dirigido por IA’ (AI-targeted cloaking), permite a atacantes manipular el contenido que los rastreadores de IA consumen, haciéndoles creer que la información falsa es una verdad autorizada. Este método, sumado a la casi total ausencia de medidas de protección en los navegadores agénticos, representa una nueva y peligrosa frontera para la desinformación y el ciberdelito.</p>
+        </div>
+        <script>
+            let noticia = document.getElementsByClassName("noticia")
+            for(let i = 0; i < 3; i++){
+                let titular = noticia[i].querySelector("h2")
+                titular.addEventListener("click", function(){
+                noticia[i].querySelector("p").style.display = "none"    
+                })
+            }
+        </script>
+    </body>
+    </html>

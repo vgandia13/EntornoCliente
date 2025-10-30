@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head></head>
+    <body>
+        <form id="form" onsubmit="return validar()">
+            <input type="number" id="num">
+            <button type="submit">Enviar</button>
+        </form>
+        <script>
+            function validar(){
+                let num = document.getElementById("num").value
+                return !isNaN(num)
+            }
+        </script>
+    </body>
+</html>

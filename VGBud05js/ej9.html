@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head></head>
+    <body>
+        <img src="imagen-noencontrada.jpg" id="img">
+        <script>
+            let img = document.getElementById("img")
+            img.addEventListener("error", function(){
+                img.src = "ocean car.jpg"
+            })
+        </script>
+    </body>
+</html>
