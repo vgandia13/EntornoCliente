@@ -1,0 +1,17 @@
+<script>
+    var numeros = [];
+    do{
+        var num = prompt("Introduce un número (negativo para terminar):")
+        if(num != 0){
+            numeros.push(num);
+        }else{
+            document.write("Has introducido un negativo"+"<br>")
+        }
+    }while(num >= 0)
+    var suma = 0;
+    for(i = 0; i < numeros.length; i++){
+        suma += parseInt(numeros[i])
+    }
+    var media = parseInt(suma / (numeros.length - 1))
+    document.write("La media de los números introducidos es: " + media)
+</script>

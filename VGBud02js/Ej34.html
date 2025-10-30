@@ -1,0 +1,17 @@
+<script>
+    var notas = []
+    var aprobados = 0
+    var suspensos = 0
+    for(var i=0; i<6; i++){
+        notas[i] = prompt("Introduce la nota " + (i+1))
+    }
+    for(var i=0; i<notas.length; i++){
+        if(notas[i] >= 5){
+            aprobados++
+        } else {
+            suspensos++
+        }
+    }
+    document.write("Aprobados: " + aprobados + "<br>")
+    document.write("Suspensos: " + suspensos)
+</script>

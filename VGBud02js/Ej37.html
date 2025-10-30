@@ -1,0 +1,15 @@
+<script>
+    var calif = []
+    var suspenso = false
+    for (var i = 0; i < 10; i++) {
+        calif[i] = prompt("Introduce la calificación " + (i + 1))
+        if (calif[i] < 5) {
+            suspenso = true
+        }
+    }
+    if (suspenso) {
+        document.write("Hay al menos un suspenso")
+    } else {
+        document.write("No hay suspensos")
+    }
+</script>

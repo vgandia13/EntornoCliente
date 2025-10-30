@@ -1,0 +1,7 @@
+<script>
+    var horas = prompt("Introduce las horas trabajadas:");
+    var horasExtra = horas % 40
+    var horasNormales = horas - horasExtra
+    var pago = (horasNormales * 12) + (horasExtra * 16);
+    document.write("El pago total es: " + pago + " euros");
+</script>

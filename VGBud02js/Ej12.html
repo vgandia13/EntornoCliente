@@ -1,0 +1,18 @@
+<script>
+    var contador = 0
+    var num = 0
+    var pares = []
+    do{
+        for(i = 0; i < 5; ++i){
+            if(num % 2 == 0){
+                ++contador
+                pares [i] = num
+                ++num
+            }else{
+                ++num
+                --i
+            }
+        }
+    }while(contador<5)
+    document.write(pares)
+</script>

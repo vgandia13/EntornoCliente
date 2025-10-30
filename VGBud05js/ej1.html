@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cambiar imagen al hacer clic</title>
+  <style>
+    img {
+      width: 300px;
+      height: 200px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <img id="imagen" src="imagen1.jpg" alt="Imagen inicial">
+  <script>
+    const imagen = document.getElementById("imagen");
+    imagen.addEventListener("click", function() {
+      if (imagen.src.includes("imagen1.jpg")) {
+        imagen.src = "imagen2.jpg";
+      } else {
+        imagen.src = "imagen1.jpg";
+      }
+    });
+  </script>
+</body>
+</html>

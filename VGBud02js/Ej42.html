@@ -1,0 +1,19 @@
+<script>
+    var notas = []
+    for (var i = 0; i < 3; i++) {
+        notas[i] = parseFloat(prompt("Introduce la nota " + (i + 1) + ":"))
+    }
+    var media = (notas[0] + notas[1] + notas[2]) / 3
+    alert("La media es: " + media)
+    if(media < 5){
+        alert("Insuficiente")
+    } else if(media >= 5 && media < 6){
+        alert("Suficiente")
+    } else if(media >= 6 && media < 7){
+        alert("Bien")
+    } else if(media >= 7 && media < 9){
+        alert("Notable")
+    } else {
+        alert("Sobresaliente")
+    }
+</script>

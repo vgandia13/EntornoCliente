@@ -1,0 +1,10 @@
+<script>
+    function letraAleatoria() {
+    // Generar un número entero aleatorio entre 65 y 90 (inclusive)
+    const codigo = Math.floor(Math.random() * (90 - 65 + 1)) + 65;
+  
+    // Convertir el código ASCII a letra
+    return String.fromCharCode(codigo);
+}
+document.write(letraAleatoria());
+</script>

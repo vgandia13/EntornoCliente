@@ -1,0 +1,12 @@
+<script>
+    let texto = "Centro de Estudios IES el Grao";
+    // Encontrar la posición donde aparece "de"
+    let posDe = texto.indexOf("de");
+    if (posDe !== -1) {
+    // Extraer 11 caracteres a partir de esa posición
+    let resultado = texto.substr(posDe, 11);
+    document.write(resultado);
+    } else {
+    document.write("La palabra 'de' no se encontró en la cadena.");
+    }
+</script>

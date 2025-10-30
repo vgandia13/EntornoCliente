@@ -1,0 +1,15 @@
+<script>
+    var numeros = []
+    var numNegativo = false
+    for (var i = 0; i < 10; i++) {
+        numeros[i] = prompt("Introduce un número:")
+        if (numeros[i] < 0){
+            numNegativo = true
+        }
+    }
+    if (numNegativo) {
+        document.write("Se ha introducido al menos un número negativo.")
+    }if (!numNegativo) {
+        document.write("No se ha introducido ningún número negativo.")
+    }
+</script>

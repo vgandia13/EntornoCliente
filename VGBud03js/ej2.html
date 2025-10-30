@@ -1,0 +1,19 @@
+<script>
+    function formatoFechaCompleta(fecha) {
+    const diasSemana = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado']
+    const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
+    let diaSemana = diasSemana[fecha.getDay()]
+    let diaMes = fecha.getDate()
+    let mes = meses[fecha.getMonth()]
+    let anio = fecha.getFullYear()
+    let horas = fecha.getHours()
+    let minutos = fecha.getMinutes()
+    let segundos = fecha.getSeconds()
+    horas = horas < 10 ? '0' + horas : horas
+    minutos = minutos < 10 ? '0' + minutos : minutos
+    segundos = segundos < 10 ? '0' + segundos : segundos
+    return `${diaSemana}, ${diaMes} de ${mes} del ${anio} a las ${horas}:${minutos}:${segundos}`
+    }
+    let ahora = new Date()
+    document.write(formatoFechaCompleta(ahora))
+</script>

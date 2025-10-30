@@ -1,0 +1,12 @@
+<script>
+    var N = prompt("Introduce un número");
+    var sueldos = [N]
+    var sueldoMax = 0
+    for (i = 0; i < N; i++) {
+        sueldos [i] = prompt("Introduce el sueldo " + (i + 1))
+        if (sueldos [i] > sueldoMax) {
+            sueldoMax = sueldos [i]
+        }
+    }
+    document.write("El sueldo máximo es: " + sueldoMax)
+</script>

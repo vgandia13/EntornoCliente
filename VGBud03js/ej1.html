@@ -1,0 +1,12 @@
+<script>
+    function formatoFecha(fecha) {
+    let dia = fecha.getDate()
+    let mes = fecha.getMonth() + 1
+    let anio = fecha.getFullYear()
+    dia = dia < 10 ? '0' + dia : dia
+    mes = mes < 10 ? '0' + mes : mes
+    return `${dia}/${mes}/${anio}`
+    }
+    let hoy = new Date()
+    document.write(formatoFecha(hoy))
+</script>

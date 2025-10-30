@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Calculator</title>
+    <script>
+        function sueldoFinal(sueldo, comision, retencion) {
+            let comisionDecimal = comision / 100;
+            let retencionDecimal = retencion / 100;
+
+            let comision = sueldo * comisionDecimal;
+
+            let salarioBruto = sueldo + comision;
+
+            let retencion = salarioBruto * retencionDecimal;
+
+            let salarioFinal = salarioBruto - retencion;
+
+            return salarioFinal;
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

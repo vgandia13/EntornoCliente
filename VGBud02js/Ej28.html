@@ -1,0 +1,28 @@
+<script>
+    var numPos = []
+    var numNeg = []
+    var numCeros = 0
+    for (var i = 0; i < 10; i++) {
+        var num = parseInt(prompt("Introduce un número:"))
+        if (num > 0) {
+            numPos.push(num)
+        } else if (num < 0) {
+            numNeg.push(num)
+        } else {
+            numCeros++
+        }
+    }
+    mediaPos = 0
+    mediaNeg = 0
+    for (var i = 0; i < numPos.length; i++) {
+        mediaPos += numPos[i]
+    }
+    for (var i = 0; i < numNeg.length; i++) {
+        mediaNeg += numNeg[i]
+    }
+    mediaPos = mediaPos / numPos.length
+    mediaNeg = mediaNeg / numNeg.length
+    document.write("La media de los numeros positivos es: " +mediaPos+ "<br>")
+    document.write("La media de los numeros negativos es: " +mediaNeg+ "<br>")
+    document.write("La cantidad de ceros es: " +numCeros+ "<br>")
+</script>

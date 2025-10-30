@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Detector de Navegador</title>
+</head>
+<body>
+  <button onclick="detectarNavegador()">Detectar navegador</button>
+  <div id="resultado"></div>
+  <script>
+    function detectarNavegador() {
+      const userAgent = navigator.userAgent;
+      let navegador = "Navegador desconocido";
+
+      if (userAgent.includes("Firefox")) {
+        navegador = "Mozilla Firefox";
+      } else if (userAgent.includes("Chrome")) {
+        navegador = "Google Chrome";
+      } else {
+        navegador = "Ninguno de los anteriores";
+      }
+      document.getElementById('resultado').textContent = 'Estás usando: ' + navegador;
+    }
+    function mostrarArray(){
+      const array = ["Elemento 1", "Elemento 2", "Elemento 3"];
+      document.getElementById('resultado').textContent = array.join(', ');
+    }
+  </script>
+</body>
+</html>

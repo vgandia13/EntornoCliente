@@ -1,0 +1,21 @@
+<script>
+    var numeros = []
+    var num = 0
+    for(let i=1; i<=10; i++){
+        if(num % 2 == 0){
+            ++num
+            --i
+        }else if (num % 2 != 0){
+            numeros.push(num)
+            ++num
+        }else{
+            ++num
+            --i
+        }
+    }
+    var producto = 1
+    for(let i=0; i<numeros.length; i++){
+        producto = producto * numeros[i]
+    }
+    document.write("El producto de los 10 primeros numeros naturales impares es: " + producto)
+</script>

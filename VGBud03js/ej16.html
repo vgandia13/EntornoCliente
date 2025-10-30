@@ -1,0 +1,9 @@
+<script>
+    function extraerFichaDomino() {
+    // Los valores posibles en cada lado son del 0 al 6
+    const lado1 = Math.floor(Math.random() * 7);
+    const lado2 = Math.floor(Math.random() * 7); 
+    return `[${lado1}|${lado2}]`;
+    }
+    document.write("Ficha extraída: " + extraerFichaDomino());
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+
+    </head>
+    <body>
+        <p id="miTexto">Haz click sobre este texto</p>
+        <script>
+            let miTexto = document.getElementById("miTexto")
+            function colorAleatorio(){
+                let r = Math.floor(Math.random()* 256)
+                let g = Math.floor(Math.random()* 256)
+                let b = Math.floor(Math.random()* 256)
+                return "rgb("+r+","+g+","+b+")"
+            }
+            miTexto.addEventListener("contextmenu", function(e){ e.preventDefault(); })
+            miTexto.addEventListener("mousedown", function(){
+                if(event.button === 0){
+                    let tamañoActual = parseInt(window.getComputedStyle(miTexto).fontSize)
+                    miTexto.style.fontSize = (tamañoActual + 20) + "px"
+                }else if(event.button === 1){
+                    miTexto.style.color = colorAleatorio()
+                }else if(event.button === 2){
+                    let tamañoActual = parseInt(window.getComputedStyle(miTexto).fontSize)
+                    miTexto.style.fontSize = (tamañoActual - 20) + "px"
+                }
+            })
+        </script>
+    </body>
+</html>

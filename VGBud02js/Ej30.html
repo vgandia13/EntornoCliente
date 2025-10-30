@@ -1,0 +1,30 @@
+<script>
+    var edad = []
+    var altura = []
+    var mayores = 0
+    var altos = 0
+    for (var i = 0; i < 5; i++) {
+        edad[i] = parseInt(prompt("Ingrese la edad de la persona " + (i + 1)))
+        altura[i] = parseFloat(prompt("Ingrese la altura de la persona " + (i + 1)))
+        if (edad[i] > 18) {
+            mayores++
+        }
+        if (altura[i] > 1.75) {
+            altos++
+        }
+    }
+    var mediaEdad = 0
+    for (var i = 0; i < 5; i++) {
+        mediaEdad += edad[i]
+    }
+    mediaEdad /= 5
+    var mediaAltura = 0
+    for (var i = 0; i < 5; i++) {
+        mediaAltura += altura[i]
+    }
+    mediaAltura /= 5
+    document.write("Cantidad de personas mayores de edad: " + mayores + "<br>")
+    document.write("Cantidad de personas que miden más de 1.75: " + altos + "<br>")
+    document.write("Media de las edades: " + mediaEdad + "<br>")
+    document.write("Media de las alturas: " + mediaAltura + "<br>")
+</script>

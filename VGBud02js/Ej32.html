@@ -1,0 +1,21 @@
+<script>
+    var facTotal = 0
+    var cantidadLitros = []
+    var precioLitro = []
+    var precioFactura = []
+    var fac600 = 0
+    var litrosTotales = 0
+    for(var i=0; i<5; i++){
+        precioLitro[i] = prompt("Ingrese el precio del litro en la factura " + (i+1))
+        cantidadLitros[i] = prompt("Ingrese la cantidad de litros en la factura " + (i+1))
+        precioFactura[i] = cantidadLitros[i] * precioLitro[i]
+        if(precioFactura[i] > 600){
+            fac600++
+        }
+        facTotal = facTotal + precioFactura[i]
+        litrosTotales = litrosTotales + cantidadLitros[i]
+    }
+    document.write("El total de las 5 facturas es: " + facTotal+"<br>")
+    document.write("La cantidad de facturas mayores a $600 es: " + fac600+"<br>")
+    document.write("La cantidad total de litros es: " + litrosTotales)
+</script>

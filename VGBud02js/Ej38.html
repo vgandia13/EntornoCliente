@@ -1,0 +1,15 @@
+<script>
+    var numeros = []
+    var num3 = false
+    for (var i = 0; i < 5; i++) {
+        numeros[i] = prompt("Introduce un número:")
+        if(numeros[i] % 3 == 0){
+            num3 = true
+        }
+    }
+    if(num3){
+        document.write("Hay al menos un número múltiplo de 3")
+    } else {
+        document.write("No hay ningún número múltiplo de 3")
+    }
+</script>

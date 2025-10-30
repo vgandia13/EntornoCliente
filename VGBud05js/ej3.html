@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+
+    </head>
+    <body>
+        <img id="miImagen" src="imagen_1.webp" alt="Imagen" width="200">
+        <script>
+            let clickTimer 
+            let img = document.getElementById("miImagen")
+            img.addEventListener("dblclick", function(){
+                clearTimeout(clickTimer)
+                if (img.width < 500) img.width += 100
+            })
+            img.addEventListener("click", function(){
+                clickTimer = setTimeout(function(){
+                if (img.width > 50) img.width -= 100}, 350)
+            })
+        </script>
+    </body>
+</html>

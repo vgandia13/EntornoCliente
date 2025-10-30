@@ -1,0 +1,12 @@
+<script>
+    function sumarTiempo(fecha, años, meses, dias) {
+    let nuevaFecha = new Date(fecha);
+    nuevaFecha.setFullYear(nuevaFecha.getFullYear() + años);
+    nuevaFecha.setMonth(nuevaFecha.getMonth() + meses);
+    nuevaFecha.setDate(nuevaFecha.getDate() + dias);
+    return nuevaFecha;
+    }
+    let fechaActual = new Date();
+    let fechaModificada = sumarTiempo(fechaActual, 10, 4, 5);
+    document.write(fechaModificada.toString());
+</script>

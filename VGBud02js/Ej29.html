@@ -1,0 +1,16 @@
+<script>
+    var sueldos = []
+    var mayor = 0
+    for(var i=0; i<10; i++){
+        sueldos[i] = parseFloat(prompt("Ingrese el sueldo " + (i+1) + ":"))
+        if(sueldos[i] > 10000){
+            mayor++
+        }
+    }
+    var suma = 0
+    for(var i=0; i<sueldos.length; i++){
+        suma += sueldos[i]
+    }
+    document.write("Cantidad de sueldos mayores a $10,000: " + mayor + "<br>")
+    document.write("Suma total de los sueldos: $" + suma)
+</script>
